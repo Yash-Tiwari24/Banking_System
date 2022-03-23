@@ -13,9 +13,10 @@ namespace Banking_System.Model.Model
         [Key]
         public int Id { get; set; }
         public string AccountNumber { get; set; }
-        public virtual int UserId { get; set; }
-        [ForeignKey("Users")]
+        public virtual string UserId { get; set; }
+        [ForeignKey("UserId")]
         public virtual Users Users { get; set; }
-        public string TransactionLog { get; set; }
+        public string ActivityBy { get; set; }
+        public DateTime ActivityDate { get; set; }
     }
 }

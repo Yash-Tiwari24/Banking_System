@@ -25,6 +25,7 @@ namespace Banking_System.Model.Model
         [Required(ErrorMessage ="Enter Transaction Detail")]
         public string TransactionParticulars { get; set; }
         public TranType TransactionType { get; set; } 
+        
         public DateTime TransactionDate { get; set; }
         public Transaction()
         {

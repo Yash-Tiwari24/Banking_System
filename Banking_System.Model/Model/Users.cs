@@ -12,8 +12,7 @@ namespace Banking_System.Model.Model
     [Table("Users")]
     public class Users : IdentityUser
     {
-        [Key]
-        public int UserId { get; set; }
+        
         
         [StringLength(20, MinimumLength = 4)]
         [Required(ErrorMessage = "please enter first name")]
