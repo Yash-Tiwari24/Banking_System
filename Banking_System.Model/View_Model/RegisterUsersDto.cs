@@ -1,21 +1,15 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Banking_System.Model.Model
+namespace Banking_System.Model.View_Model
 {
-    [Table("Users")]
-    public class Users : IdentityUser
+   public class RegisterUsersDto
     {
         
-        
-        [StringLength(20, MinimumLength = 4)]
-        [Required(ErrorMessage = "please enter first name")]
         public string FirstName { get; set; }
         [StringLength(20, MinimumLength = 4)]
         [Required(ErrorMessage = "please enter middle name")]
@@ -25,9 +19,10 @@ namespace Banking_System.Model.Model
         public string LastName { get; set; }
         [Required(ErrorMessage = "please enter Date Of Birth")]
         public DateTime DOB { get; set; }
-        
-        [Required(ErrorMessage = "please enter status")]
         public string Status { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
 
 
     }
