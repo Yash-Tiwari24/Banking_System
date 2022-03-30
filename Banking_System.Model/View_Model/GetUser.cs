@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banking_System.Model.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,5 +19,7 @@ namespace Banking_System.Model.View_Model
         public string UserName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+
+        public IEnumerable<Transaction> Transactions { get; set; }
     }
 }

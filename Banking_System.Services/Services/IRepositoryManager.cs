@@ -9,7 +9,9 @@ namespace Banking_System.Services.Services
    public interface IRepositoryManager
     {
         IAccountRepository Account { get; }
-        ITransactionRepository Transaction { get; }
+       
         IUserRepository User { get; }
+        Task SaveAsync();
+        void Save();
     }
 }

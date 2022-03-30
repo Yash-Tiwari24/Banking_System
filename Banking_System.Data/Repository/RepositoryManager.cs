@@ -28,15 +28,7 @@ namespace Banking_System.Repository.Repository
                 return _accountRepository;
             }
         }
-        public ITransactionRepository Transaction
-        {
-            get
-            {
-                if (_transactionRepository == null)
-                    _transactionRepository = new TransactionRepository(_repositoryContext);
-                return _transactionRepository;
-            }
-        }
+        
         public IUserRepository User
         {
             get
@@ -46,7 +38,11 @@ namespace Banking_System.Repository.Repository
                 return _userRepository;
             }
         }
-        public void Save() => _repositoryContext.SaveChanges();
+        public Task SaveAsync() => _repositoryContext.SaveChangesAsync();
+        public void Save()
+        {
+            _repositoryContext.SaveChanges();
+        }
 
     }
 }

@@ -13,7 +13,7 @@ namespace Banking_System.Model.Model
     {
         [Key]
         public int Id { get; set; }
-       
+        
         public virtual string UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual Users Users { get; set; }
@@ -37,7 +37,6 @@ namespace Banking_System.Model.Model
         {
             AccountNumber = Convert.ToString((long)Math.Floor(rand.NextDouble() * 9_000_000_000L + 1_000_000_000L));
             //9_000_000_000 so we could get a 10-digit random account number
-            AccountHolderName = $"{Users.FirstName} {Users.MiddleName} {Users.LastName}";
         }
     }
     public enum AccountType

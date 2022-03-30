@@ -42,6 +42,8 @@ namespace Banking_System.API
             services.AddTransient<IGetUserData,GetUserData>();
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ITransactionRepository,TransactionRepository>();
             services.ConfigureLoggerService();
             services.AddAuthentication();
             services.ConfigureIdentity();
@@ -67,7 +69,7 @@ namespace Banking_System.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseAuthentication();
+            
             app.UseAuthorization();
 
 
