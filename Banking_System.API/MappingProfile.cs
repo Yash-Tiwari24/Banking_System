@@ -15,6 +15,9 @@ namespace Banking_System.API
             CreateMap<Users, GetUser>();
             CreateMap<RegisterUsersDto, Users>();
             CreateMap<UpdateUserDto, Users>();
+            CreateMap<RegisterNewAccountDto, Account>();
+            CreateMap<UpdateAccount, Account>();
+            
         }
     }
 }
