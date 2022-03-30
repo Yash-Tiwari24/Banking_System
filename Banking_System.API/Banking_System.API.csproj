@@ -5,7 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.14" />
+    <PackageReference Include="NLog" Version="4.7.14" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Banking_System.Common\Banking_System.Common.csproj" />
+    <ProjectReference Include="..\Banking_System.Data\Banking_System.Repository.csproj" />
+    <ProjectReference Include="..\Banking_System.Logger\Banking_System.Logger.csproj" />
+    <ProjectReference Include="..\Banking_System.Model\Banking_System.Model.csproj" />
+    <ProjectReference Include="..\Banking_System.Services\Banking_System.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logger\" />
   </ItemGroup>
 
 </Project>

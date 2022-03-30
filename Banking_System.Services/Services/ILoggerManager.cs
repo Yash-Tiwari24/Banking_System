@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Banking_System.Common.Logger
+namespace Banking_System.Services.Services
 {
    public interface ILoggerManager
     {
